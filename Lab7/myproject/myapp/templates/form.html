@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบ form</title>
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+</head>
+<body>
+    <div class="form">
+        <h1>บันทึกข้อมูลพนักงาน</h1>
+        
+        <div class="title">
+        <h3>Full Name</h3>
+        <input type="text" name="fname" placeholder="ชื่อ-นามสกุล">
+        </div>
+
+        <div class="title">
+        <h3>Email</h3>
+        <input type="email" placeholder="อีเมล">
+        </div>
+
+        <div class="title">
+        <h3>Position</h3>
+          <select name="Position">
+            <option value="" disabled selected>-- เลือกตำแหน่ง --</option>
+            <option value="Manager">Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="Staff">Staff</option>
+          </select>
+        </div>
+
+        <div class="title">
+        <h3>Phone Number</h3>
+        <input type="tel" placeholder="เบอร์โทรศัพท์">
+        </div>
+
+        <button type="submit" class="butsub">Submit</button>
+
+    </div>
+    
+</body>
+</html>
