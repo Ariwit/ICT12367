@@ -1,12 +1,118 @@
 {% extends "base.html" %}
 
 {% block title %}
-<title>หน้าแรกของเว็บไซต์</title>
+<title>หน้าแรกระบบบันทึกข้อมูล</title>
 {% endblock %}
 
 {% block content %}
- <h1>ICT12367 SPU</h1>
- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus quidem vel nihil 
-    amet mollitia tenetur 
-    neque ea nulla placeat!</p>
+<div class="container mt-4">
+    <div class="p-5 mb-4 bg-white rounded-3 shadow-sm border-start border-success border-5">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold text-success">ระบบบันทึกข้อมูลประชากร</h1>
+                <p class="fs-5 text-muted">ยินดีต้อนรับเข้าสู่ระบบจัดการข้อมูลส่วนบุคคล <br> 
+                คุณสามารถเริ่มต้นบันทึกข้อมูลใหม่ หรือตรวจสอบสถิติได้จากหน้านี้</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="/form" class="btn btn-success btn-lg px-4 me-md-2 shadow">เริ่มบันทึกข้อมูล</a>
+                    <a href="/about" class="btn btn-outline-secondary btn-lg px-4">เกี่ยวกับเรา</a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center d-none d-md-block">
+                <i class="bi bi-people-fill text-success" style="font-size: 6rem;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                            <span class="text-success fs-4">👥</span>
+                        </div>
+                        <h5 class="card-title mb-0 text-muted">ประชากรทั้งหมด</h5>
+                    </div>
+                    <h2 class="display-6 fw-bold">1,250</h2>
+                    <p class="text-success small mb-0">▲ เพิ่มขึ้น 12% เดือนนี้</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                            <span class="text-primary fs-4">📝</span>
+                        </div>
+                        <h5 class="card-title mb-0 text-muted">รายการวันนี้</h5>
+                    </div>
+                    <h2 class="display-6 fw-bold">48</h2>
+                    <p class="text-muted small mb-0 text-primary">อัปเดตล่าสุด: 5 นาทีที่แล้ว</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                            <span class="text-warning fs-4">⚠️</span>
+                        </div>
+                        <h5 class="card-title mb-0 text-muted">รอการตรวจสอบ</h5>
+                    </div>
+                    <h2 class="display-6 fw-bold">7</h2>
+                    <p class="text-danger small mb-0">ต้องการการยืนยันด่วน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0 overflow-hidden">
+        <div class="card-header bg-dark text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">รายการบันทึกข้อมูลล่าสุด</h5>
+                <button class="btn btn-sm btn-outline-light">ดูทั้งหมด</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">ID</th>
+                        <th>ชื่อ-นามสกุล</th>
+                        <th>ประเภท</th>
+                        <th>วันที่บันทึก</th>
+                        <th class="text-center">สถานะ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ps-4">#001</td>
+                        <td><strong>สมชาย ใจดี</strong></td>
+                        <td>สมาชิกทั่วไป</td>
+                        <td>08 มี.ค. 2026</td>
+                        <td class="text-center"><span class="badge bg-success text-white">เสร็จสิ้น</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4">#002</td>
+                        <td><strong>วิภา มีสุข</strong></td>
+                        <td>สมาชิกพิเศษ</td>
+                        <td>08 มี.ค. 2026</td>
+                        <td class="text-center"><span class="badge bg-success text-white">เสร็จสิ้น</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4">#003</td>
+                        <td><strong>สมศรี มีเงิน</strong></td>
+                        <td>ผู้ดูแลระบบ</td>
+                        <td>07 มี.ค. 2026</td>
+                        <td class="text-center"><span class="badge bg-warning text-dark">รอตรวจ</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="margin-bottom: 120px;"></div>
 {% endblock %}

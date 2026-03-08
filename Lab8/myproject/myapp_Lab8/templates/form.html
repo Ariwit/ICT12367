@@ -1,10 +1,63 @@
 {% extends "base.html" %}
 
 {% block title %}
-<title>แบบฟอร์มบันทึกข้อมูลประชากร</title>
+<title>แบบฟอร์มบันทึกข้อมูลประชากร - ICT12367</title>
+
+<style>
+    .btn-reset-custom:hover {
+        background-color: #dc3545 !important; 
+        border-color: #dc3545 !important;
+        color: white !important;
+    }
+</style>
 {% endblock %}
 
 {% block content %}
- <h1>form</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white text-center">
+                    <h4 class="mb-0">แบบฟอร์มบันทึกข้อมูลประชากร</h4>
+                </div>
+                <div class="card-body">
+                    <form action="/submit" method="POST">
+                        
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">ชื่อ-นามสกุล</label>
+                            <input type="text" class="form-control" id="fullName" name="full_name" placeholder="ระบุชื่อและนามสกุล" required>
+                        </div>
 
+                        <div class="mb-3">
+    <label for="birthDate" class="form-label">วัน/เดือน/ปี เกิด</label>
+    <input type="date" class="form-control" id="birthDate" name="birth_date">
+</div>
+
+<div class="mb-4">
+    <label class="form-label">เพศ</label>
+    <div class="mt-1">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+            <label class="form-check-label" for="male">ชาย</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+            <label class="form-check-label" for="female">หญิง</label>
+        </div>
+    </div>
+</div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success">บันทึกข้อมูล</button>
+                            <button type="reset" class="btn btn-outline-secondary btn-reset-custom">ล้างข้อมูล</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-bottom: 100px;"></div>
 {% endblock %}

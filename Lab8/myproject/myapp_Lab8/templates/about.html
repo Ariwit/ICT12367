@@ -1,10 +1,112 @@
-{% extends "base.html" %}
+{% extends "base.html" %}{% load static %}
 
 {% block title %}
-<title>หน้าแรกของเว็บไซต์</title>
+<title>Image</title>
+<style>
+    .gallery-img {
+        height: 200px; 
+        object-fit: cover; 
+        cursor: pointer; 
+        transition: transform 0.2s;
+    }
+    .gallery-img:hover {
+        transform: scale(1.05); 
+    }
+</style>
 {% endblock %}
 
 {% block content %}
- <h1>เกี่ยว</h1>
- 
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-5 fw-bold text-success">ภาพผลงาน</h1>
+            <p class="text-muted fs-5">แสดงรูปภาพกิจกรรมและผลงานต่างๆ</p>
+            <hr class="w-25 mx-auto border-success border-2 opacity-50">
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/1.1.jpg' %}" class="card-img-top gallery-img" alt="Image 1">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 1</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/2.jpg' %}" class="card-img-top gallery-img" alt="Image 2">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 2</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/3.jpg' %}" class="card-img-top gallery-img" alt="Image 3">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 3</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/4.jpg' %}" class="card-img-top gallery-img" alt="Image 4">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 4</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/5.jpg' %}" class="card-img-top gallery-img" alt="Image 5">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 5</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/6.jpg' %}" class="card-img-top gallery-img" alt="Image 6">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 6</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/7.jpg' %}" class="card-img-top gallery-img" alt="Image 7">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 7</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/8.jpg' %}" class="card-img-top gallery-img" alt="Image 8">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 8</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <img src="{% static 'image/9.jpg' %}" class="card-img-top gallery-img" alt="Image 9">
+                <div class="card-body text-center p-2">
+                    <small class="text-muted">รูปภาพที่ 9</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div style="margin-bottom: 100px;"></div>
 {% endblock %}
