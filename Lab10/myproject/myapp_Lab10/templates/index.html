@@ -1,14 +1,29 @@
 {% extends 'base.html' %}
 
+{% block title %}
+<title>หน้าแรกระบบ</title>
+{% endblock %}
+
 {% block content %}
+    <h2 style="color: #a3396e; font-weight: bold;" class="mt-4 mb-4">ยินดีต้อนรับสู่เข้าสู่ประชากร</h2>
+    
+    <style>
+    .table-hover tbody tr:hover td, 
+    .table-hover tbody tr:hover th {
+        background-color: rgba(97, 157, 206, 0.791) !important;
+        color: white !important; 
+        transition: 0.3s;
+    }
+</style>
+
 <table class="table table-hover">
-    <thead>
+    <thead style="border-bottom: 1px solid #000; opacity: 1;">
         <tr>
             <th scope="col">รหัสประชากร</th>
             <th scope="col">ชื่อประชากร</th>
             <th scope="col">อายุ</th>
-            <th scope="col">แก้ไข</th>
-            <th scope="col">ลบ</th>
+            <th scope="col" class="text-center">แก้ไข</th>
+            <th scope="col" class="text-center">ลบ</th>
         </tr>
     </thead>
  <tbody>
@@ -17,8 +32,8 @@
         <th scope="row">{{person.id}}</th>
         <td>{{person.name}}</td>
         <td>{{person.age}}</td>
-        <td class="align-middle text-center"><a href="#" class="btn" style="background-color:#fd7e14; color:white;">แก้ไข</a></td>
-        <td><a href="#" class="btn" style="background-color:#d63384; color:white;">ลบ</a></td>
+        <td class="text-center"><a href="#" class="btn" style="background-color:#d63384; color:white;">แก้ไข</a></td>
+        <td class="text-center"><a href="#" class="btn" style="background-color:#fd7e14; color:white;">ลบ</a></td>
     </tr>
     {% endfor %}
  </tbody>   
